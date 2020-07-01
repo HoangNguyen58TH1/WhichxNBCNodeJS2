@@ -1,0 +1,29 @@
+{
+  "name": "whichnbc",
+  "version": "1.0.0",
+  "description": "demo module Whichx in nodeJS handling NBC",
+  "main": "index.js",
+  "dependencies": {
+    "image-downloader": "^4.0.1",
+    "mysql": "^2.18.1",
+    "puppeteer": "^3.1.0",
+    "remove-punctuation": "0.0.4",
+    "vietnamese-stopwords": "0.0.2",
+    "vntk": "^1.4.4",
+    "whichx": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HoangNguyen",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoangNguyen58TH1/whichxNBCNodeJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HoangNguyen58TH1/whichxNBCNodeJS/issues"
+  },
+  "homepage": "https://github.com/HoangNguyen58TH1/whichxNBCNodeJS#readme"
+}

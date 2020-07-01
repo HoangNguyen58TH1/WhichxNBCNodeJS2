@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>ChartJS</title>
+</head>
+
+<body>
+  <style>
+    /* 'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'], */
+
+    #piechart1>div>div>div>div>table>tbody>tr:first-child>td,
+    #piechart2>div>div>div>div>table>tbody>tr:nth-child(2)>td,
+    #piechart3>div>div>div>div>table>tbody>tr:nth-child(3)>td,
+    #piechart4>div>div>div>div>table>tbody>tr:nth-child(4)>td,
+    #piechart5>div>div>div>div>table>tbody>tr:nth-child(5)>td,
+    #piechart6>div>div>div>div>table>tbody>tr:nth-child(6)>td {
+      color: #DF0101;
+      background-color: #bbfff5;
+      font-weight: bold;
+    }
+
+    .table_chart {
+      margin-bottom: 200px;
+      border: 1px solid #000;
+    }
+
+    .table_chart>div>div>div>div {
+      left: 0px !important;
+      overflow: unset !important;
+      width: 600px !important;
+      height: 160px !important;
+      margin-bottom: 160px;
+    }
+
+    .table_chart>div>div>div>div>table {
+      margin: auto !important;
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+
+    th,
+    tr,
+    td {
+      border: 1px solid #000;
+      padding: 3px;
+    }
+  </style>
+  <!-- <h1 style="text-align: center;">Algorithm Page</h1> -->
+  <h1 style="text-align: center;">Naive Bayes Classifier</h1>
+  <div class="table_chart" id="piechart1" style="text-align: center; width: 33%;  float: left;">error1</div>
+  <div class="table_chart" id="piechart2" style="text-align: center; width: 33%;  float: left;">error2</div>
+  <div class="table_chart" id="piechart3" style="text-align: center; width: 33%;  float: left;">error3</div>
+  <div class="table_chart" id="piechart4" style="text-align: center; width: 33%;  float: left;">error4</div>
+  <div class="table_chart" id="piechart5" style="text-align: center; width: 33%;  float: left;">error5</div>
+  <div class="table_chart" id="piechart6" style="text-align: center; width: 33%;  float: left;">error6</div>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="filenew.js"></script>
+  <script type="text/javascript" src="handlerChartJS.js"></script>
+  <!-- <script type="module" src="handlerChartJS.js"></script> -->
+
+  <script type="text/javascript">
+    // import arrayMergeTotal from 'handlerChartJS'
+    // Load google charts
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    // console.log('abc', arrayMergeTotal);
+    // console.log('abc2', arrayMergeTotal2);
+
+    // var arrayMergeTotal = [8, 0, 2, 0, 3, 1, 1]
+    function drawChart() {
+
+      //Phap Luat - 1
+      var data = google.visualization.arrayToDataTable([
+        ['Thể loại', 'Số lượng mỗi loại tin'],
+        ['Pháp Luật', arrayMergeTotal1[0]],
+        ['Kinh Doanh', arrayMergeTotal1[1]],
+        ['Công nghệ', arrayMergeTotal1[2]],
+        ['Xe', arrayMergeTotal1[3]],
+        ['Giáo Dục', arrayMergeTotal1[4]],
+        ['Sức Khoẻ', arrayMergeTotal1[5]]
+      ]);
+      var options = {
+        'title': 'Pháp Luật',
+        'titleTextStyle': {
+          fontSize: 18,
+          x: 180
+        },
+        'width': 600,
+        'height': 300,
+        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        'is3D': true
+      };
+      //https://developers.google.com/chart/interactive/docs/gallery/piechart
+      // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+      chart.draw(data, options);
+
+
+      //Kinh Doanh - 2
+      var data2 = google.visualization.arrayToDataTable([
+        ['Thể loại', 'Số lượng mỗi loại tin'],
+        ['Pháp Luật', arrayMergeTotal2[0]],
+        ['Kinh Doanh', arrayMergeTotal2[1]],
+        ['Công nghệ', arrayMergeTotal2[2]],
+        ['Xe', arrayMergeTotal2[3]],
+        ['Giáo Dục', arrayMergeTotal2[4]],
+        ['Sức Khoẻ', arrayMergeTotal2[5]]
+      ]);
+      var options2 = {
+        'title': 'Kinh Doanh',
+        'titleTextStyle': {
+          fontSize: 18,
+          x: 180
+        },
+        'width': 600,
+        'height': 300,
+        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        'is3D': true
+      };
+      var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+      chart2.draw(data2, options2);
+
+
+      //Cong Nghe - 3
+      var data3 = google.visualization.arrayToDataTable([
+        ['Thể loại', 'Số lượng mỗi loại tin'],
+        ['Pháp Luật', arrayMergeTotal3[0]],
+        ['Kinh Doanh', arrayMergeTotal3[1]],
+        ['Công nghệ', arrayMergeTotal3[2]],
+        ['Xe', arrayMergeTotal3[3]],
+        ['Giáo Dục', arrayMergeTotal3[4]],
+        ['Sức Khoẻ', arrayMergeTotal3[5]]
+      ]);
+      var options3 = {
+        'title': 'Công Nghệ',
+        'titleTextStyle': {
+          fontSize: 18,
+          x: 180
+        },
+        'width': 600,
+        'height': 300,
+        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        'is3D': true
+      };
+      var chart2 = new google.visualization.PieChart(document.getElementById('piechart3'));
+      chart2.draw(data3, options3);
+
+
+      //Xe - 4
+      var data4 = google.visualization.arrayToDataTable([
+        ['Thể loại', 'Số lượng mỗi loại tin'],
+        ['Pháp Luật', arrayMergeTotal4[0]],
+        ['Kinh Doanh', arrayMergeTotal4[1]],
+        ['Công nghệ', arrayMergeTotal4[2]],
+        ['Xe', arrayMergeTotal4[3]],
+        ['Giáo Dục', arrayMergeTotal4[4]],
+        ['Sức Khoẻ', arrayMergeTotal4[5]]
+      ]);
+      var options4 = {
+        'title': 'Xe',
+        'titleTextStyle': {
+          fontSize: 18,
+          x: 180
+        },
+        'width': 600,
+        'height': 300,
+        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        'is3D': true
+      };
+      var chart2 = new google.visualization.PieChart(document.getElementById('piechart4'));
+      chart2.draw(data4, options4);
+
+
+      //Giao Duc - 5
+      var data5 = google.visualization.arrayToDataTable([
+        ['Thể loại', 'Số lượng mỗi loại tin'],
+        ['Pháp Luật', arrayMergeTotal5[0]],
+        ['Kinh Doanh', arrayMergeTotal5[1]],
+        ['Công nghệ', arrayMergeTotal5[2]],
+        ['Xe', arrayMergeTotal5[3]],
+        ['Giáo Dục', arrayMergeTotal5[4]],
+        ['Sức Khoẻ', arrayMergeTotal5[5]]
+      ]);
+      var options5 = {
+        'title': 'Giáo Dục',
+        'titleTextStyle': {
+          fontSize: 18,
+          x: 180
+        },
+        'width': 600,
+        'height': 300,
+        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        'is3D': true
+      };
+      var chart2 = new google.visualization.PieChart(document.getElementById('piechart5'));
+      chart2.draw(data5, options5);
+
+
+      //Suc Khoe - 6
+      var data6 = google.visualization.arrayToDataTable([
+        ['Thể loại', 'Số lượng mỗi loại tin'],
+        ['Pháp Luật', arrayMergeTotal6[0]],
+        ['Kinh Doanh', arrayMergeTotal6[1]],
+        ['Công nghệ', arrayMergeTotal6[2]],
+        ['Xe', arrayMergeTotal6[3]],
+        ['Giáo Dục', arrayMergeTotal6[4]],
+        ['Sức Khoẻ', arrayMergeTotal6[5]]
+      ]);
+      var options6 = {
+        'title': 'Sức Khoẻ',
+        'titleTextStyle': {
+          fontSize: 18,
+          x: 180
+        },
+        'width': 600,
+        'height': 300,
+        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        'is3D': true
+      };
+      var chart2 = new google.visualization.PieChart(document.getElementById('piechart6'));
+      chart2.draw(data6, options6);
+
+    }
+  </script>
+
+</body>
+
+</html>
