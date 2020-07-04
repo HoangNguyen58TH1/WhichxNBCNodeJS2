@@ -9,40 +9,15 @@ module.exports = (async () => {
   // await page.goto('https://tuoitre.vn/phap-luat.htm', {waitUntil: 'load', timeout: 0});
   // await page.goto('https://tuoitre.vn/kinh-doanh.htm', { waitUntil: 'load', timeout: 0 });
   // await page.goto('https://congnghe.tuoitre.vn/', {waitUntil: 'load', timeout: 0});
-  // await page.goto('https://tuoitre.vn/xe.htm', { waitUntil: 'load', timeout: 0 });
+  await page.goto('https://tuoitre.vn/xe.htm', { waitUntil: 'load', timeout: 0 });
   // await page.goto('https://tuoitre.vn/giao-duc.htm', { waitUntil: 'load', timeout: 0 });
-  await page.goto('https://tuoitre.vn/suc-khoe.htm', { waitUntil: 'load', timeout: 0 });
+  // await page.goto('https://tuoitre.vn/suc-khoe.htm', { waitUntil: 'load', timeout: 0 });
 
-  // Chạy đoạn JavaScript trong hàm này, đưa kết quả vào biến article1 và article2
-  //1 - crawl title, urlimg
-  // const articles = await page.evaluate(() => {
-  //   let imgUrl = document.querySelectorAll('ul.list-news-content > li.news-item > a.pos-rlt > img')
-  //   imgUrl = [...imgUrl];
-  //   let articles = imgUrl.map(link => ({
-  //     title: link.getAttribute('alt'),
-  //     urlImage: link.getAttribute('src'),
-  //   }));
-  //   return articles;
-  // })
-
-  //2 - crawl description
-  // const articles2 = await page.evaluate(() => {
-  //   let des = document.querySelectorAll('ul.list-news-content > li.news-item > div.name-news > p.sapo');
-  //   des = [...des];
-  //   let articles2 = des.map(link => ({
-  //     description: link.innerText,
-  //   }));
-  //   return articles2;
-  // });
-
-  //3 - crawl url tintuc
+  //crawl url tintuc
   const articles3 = await page.evaluate(() => {
-    //loaitin con lai
     let urlTintuc = document.querySelectorAll('ul.list-news-content > li.news-item > div.name-news > h3.title-news > a');
-    //thethao
-    // let urlTintuc = document.querySelectorAll('ul.list-news-content > li.news-item > div.txt > h3 > a');
-    // urlTintuc = [...urlTintuc].slice(4,15);
-    urlTintuc = [...urlTintuc];
+    urlTintuc = [...urlTintuc].slice(0, 2);
+    // urlTintuc = [...urlTintuc];
     let articles3 = urlTintuc.map(link => ({
       url: link.getAttribute('href')
     }))
@@ -51,40 +26,24 @@ module.exports = (async () => {
   console.log('articles3: ', articles3);
 
   //convert urlInitial into TieuDeKhongDau
-  var arrayUrl = articles3.map((arrayCurrent) => {
-    let urlInitial = arrayCurrent.url
+  var arrayUrl = articles3.map((e) => {
+    let urlInitial = e.url
     let findIndexLastCharacter = urlInitial.lastIndexOf('-')
     urlInitial = urlInitial.slice(1, findIndexLastCharacter)
-    // console.log('url Initial: ', urlInitial);
-    // console.log('----------------------');
     return urlInitial
   })
-  // console.log(arrayUrl);
 
-  //
+  //vao tung url crawll title, des, img, content
   var arrayTitle = [], arrayImageUrl = [], arrayDescription = [], arrayContentTotal = [];
   for (let articles of articles3) {
     await page.goto('https://tuoitre.vn/' + articles.url, { waitUntil: 'load', timeout: 0 });
 
     //title
     let titleTintuc = await page.evaluate(() => {
-      // let titleTintuc = document.getElementsByClassName("article-title")[0].innerText;
-      // return titleTintuc;
-
       let checkElement = document.getElementsByClassName("article-title")[0];
       let titleTintuc;
       (checkElement != undefined) ? (titleTintuc = checkElement.innerText) : (titleTintuc = '')
       return titleTintuc;
-      // let checkElement = document.getElementsByClassName("article-title")[0];
-      // let titleTintuc;
-      // if (checkElement != undefined) {
-      //   titleTintuc = checkElement.innerText;
-      // }
-      // else {
-      //   // continue;
-      //   break;
-      // }
-      // return titleTintuc;
     });
 
     //imageUrl
@@ -97,8 +56,6 @@ module.exports = (async () => {
 
     //description
     let descriptionTintuc = await page.evaluate(() => {
-      // let descriptionTintuc = document.getElementsByClassName("sapo")[0].innerText;
-      // return descriptionTintuc;
       let checkElement = document.getElementsByClassName("sapo")[0];
       let descriptionTintuc;
       (checkElement != undefined) ? (descriptionTintuc = checkElement.innerText) : (descriptionTintuc = '')
@@ -106,31 +63,23 @@ module.exports = (async () => {
     });
 
     //content
+    //contentTintuc la 1 Array gom nhung object chua chuoi
     let contentTintuc = await page.evaluate(() => {
-      // let contentTintuc = document.querySelectorAll('ul.list-news-content > li.news-item > div.name-news > h3.title-news > a');
       let contentTintuc = document.querySelectorAll('div.content.fck > p');
       contentTintuc = [...contentTintuc];
       let content = contentTintuc.map(link => ({
         content: link.innerText,
       }));
-      // if(link.innerText == undefined){ link.innerText = '' }
       return content;
     });
 
-    //log
-    // console.log("..............................");
-    // console.log(titleTintuc);
-    // console.log(imageUrlTintuc);
-    // console.log(descriptionTintuc);
-
-    //handling content - convert array into string - cach1 (con cach2 nua) - cach chi dung 3 row thay vi 5 row.
-    // console.log(contentTintuc);
-    // console.log(typeof contentTintuc);
-    var arrayContent = contentTintuc.map((arrayCurrent) => {
-      return arrayCurrent.content
+    //arrayContent di tung object cua contentTintuc de tao thanh 1 Array chua nhung ptu la chuoi
+    var arrayContent = contentTintuc.map((e) => {
+      return e.content
     })
+
+    //noi cac ptu la chuoi trong arrayContent lai
     var stringsContentTinTuc = arrayContent.join('<br/><br/> ');
-    // console.log(stringsContentTinTuc);
 
     //add element into array
     arrayTitle.push(titleTintuc) // add tung cai string vào
@@ -138,23 +87,8 @@ module.exports = (async () => {
     arrayDescription.push(descriptionTintuc) // add tung cai string vào
     arrayContentTotal.push(stringsContentTinTuc) // khác 2 cái trên.
   }
-  // console.log('testne1: ', titleTintuc); //ptu cuoi cung
-  // console.log(typeof titleTintuc); //string
-  // console.log('TITLE TOTAL: ', arrayTitle);
-  // console.log(typeof arrayTitle);
-  // console.log('IMAGE URL TOTAL: ', arrayImageUrl);
-  // console.log(typeof arrayImageUrl);
-  // console.log('SEARCH URL TOTAL: ', arrayUrl);
-  // console.log(typeof arrayUrl);
-  // console.log('DESCRIPTION TOTAL:', arrayDescription);
-  // console.log(typeof arrayDescription);
-  // console.log('CONTENT TOTAL:', arrayContentTotal);
-  // console.log(typeof arrayContentTotal);
-
 
   // In ra kết quả và đóng trình duyệt
-  // console.log('articles: ', articles);
-  // console.log('articles2: ', articles2);
   await browser.close();
 
   //whichx
@@ -206,11 +140,6 @@ module.exports = (async () => {
     // console.log('idtheloai: ', idtheloai);
 
     var articlesObject = {
-      // title: arrayTitle[i],
-      // imageurl: arrayImageUrl[i],
-      // description: arrayDescription[i],
-      // content: arrayContentTotal[i],
-      // idtheloai: idtheloai,
       idLoaiTin: idtheloai,
       TieuDe: arrayTitle[i],
       TieuDeKhongDau: arrayUrl[i],
@@ -224,8 +153,6 @@ module.exports = (async () => {
   }
   console.log('---testFinal: ', articlesArray);
 
-  var fs = require('fs')
-
   //handling files
   let totalArray = articlesArray.map(e => e.idLoaiTin)
   fs.appendFile('filenew.js', 'arrayNews = [' + totalArray + ']\n', function (err) {
@@ -235,5 +162,3 @@ module.exports = (async () => {
 
   return articlesArray;
 });
-
-// module.exports = test;
