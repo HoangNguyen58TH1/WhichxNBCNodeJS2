@@ -21,7 +21,7 @@ var removePunctuation = require('remove-punctuation');
 //Suc khoe - 6
 
 //Dan tri 10x9=90x6=
-  // const array_test = [
+  // const array_training = [
   //   [
   //     'https://dantri.com.vn/phap-luat.htm',
   //     'https://dantri.com.vn/phap-luat/trang-2.htm',
@@ -91,7 +91,7 @@ var removePunctuation = require('remove-punctuation');
   // ]
 
 //TuoiTre 15x3=45
-// const array_test = [
+// const array_training = [
 //   [
 //     'https://tuoitre.vn/phap-luat.htm',
 //     'https://tuoitre.vn/phap-luat/trang-2.htm',
@@ -152,7 +152,7 @@ var removePunctuation = require('remove-punctuation');
 //   ]
 // ]
 //Baomoi
-// const array_test = [
+// const array_training = [
 //   [
 //     'https://baomoi.com/phap-luat.epi',
 //     'https://baomoi.com/phap-luat/trang2.epi',
@@ -207,7 +207,7 @@ var removePunctuation = require('remove-punctuation');
 // ]
 
 //VnExpress
-// const array_test = [
+// const array_training = [
   // [
   //   'https://vnexpress.net/phap-luat',
   //   'https://vnexpress.net/phap-luat-p2',
@@ -261,7 +261,7 @@ var removePunctuation = require('remove-punctuation');
 // ]
 
 //VOV-DaiTiengNoi
-// const array_test = [
+// const array_training = [
 //   [
 //     'https://vov.vn/phap-luat/',
 //     'https://vov.vn/phap-luat/trang2',
@@ -298,7 +298,7 @@ var removePunctuation = require('remove-punctuation');
 // ]
 
 //ThanhNien
-const array_test = [
+const array_training = [
   [
 
   ],
@@ -351,9 +351,9 @@ const array_test = [
   ],
 ]
 
-  for(let i = 0; i < array_test.length; i++){
+  for(let i = 0; i < array_training.length; i++){
     let total_string_trains = '';
-    for (let url of array_test[i]) {
+    for (let url of array_training[i]) {
       await page.goto(url, { waitUntil: 'load', timeout: 0 });
       const result_news_total = await page.evaluate(() => {
 
