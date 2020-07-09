@@ -7,7 +7,7 @@
 
 <body>
   <style>
-    /* 'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'], */
+    /* 'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'], */
 
     #piechart1>div>div>div>div>table>tbody>tr:first-child>td,
     #piechart2>div>div>div>div>table>tbody>tr:nth-child(2)>td,
@@ -46,6 +46,7 @@
       padding: 3px;
     }
   </style>
+
   <!-- <h1 style="text-align: center;">Algorithm Page</h1> -->
   <h1 style="text-align: center;">Naive Bayes Classifier</h1>
   <div class="table_chart" id="piechart1" style="text-align: center; width: 33%;  float: left;">error1</div>
@@ -90,10 +91,16 @@
           fontSize: 18,
           x: 180
         },
-        'width': 600,
-        'height': 300,
-        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
-        'is3D': true
+        chartArea: {
+          left: 100,
+          width: "82%",
+          height: "82%"
+        },
+        // chartArea:{width: "95%"},
+        'width': 450,
+        'height': 245,
+        'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
+        'is3D': true,
       };
       //https://developers.google.com/chart/interactive/docs/gallery/piechart
       // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -112,14 +119,22 @@
         ['Sức Khoẻ', arrayMergeTotal2[5]]
       ]);
       var options2 = {
+        pie: {
+          groupWidth: '35%'
+        },
         'title': 'Kinh Doanh',
         'titleTextStyle': {
           fontSize: 18,
           x: 180
         },
-        'width': 600,
-        'height': 300,
-        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        chartArea: {
+          left: 100,
+          width: "82%",
+          height: "82%"
+        },
+        'width': 450,
+        'height': 245,
+        'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
         'is3D': true
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
@@ -142,9 +157,14 @@
           fontSize: 18,
           x: 180
         },
-        'width': 600,
-        'height': 300,
-        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        chartArea: {
+          left: 100,
+          width: "82%",
+          height: "82%"
+        },
+        'width': 450,
+        'height': 245,
+        'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
         'is3D': true
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart3'));
@@ -167,9 +187,14 @@
           fontSize: 18,
           x: 180
         },
-        'width': 600,
-        'height': 300,
-        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        chartArea: {
+          left: 100,
+          width: "82%",
+          height: "82%"
+        },
+        'width': 450,
+        'height': 245,
+        'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
         'is3D': true
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart4'));
@@ -192,9 +217,14 @@
           fontSize: 18,
           x: 180
         },
-        'width': 600,
-        'height': 300,
-        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        chartArea: {
+          left: 100,
+          width: "82%",
+          height: "82%"
+        },
+        'width': 450,
+        'height': 245,
+        'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
         'is3D': true
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart5'));
@@ -217,9 +247,14 @@
           fontSize: 18,
           x: 180
         },
-        'width': 600,
-        'height': 300,
-        'colors': ['#DF0101', '#D7DF01', '#01DFD7', '#31B404', '#29088A', '#585858'],
+        chartArea: {
+          left: 100,
+          width: "82%",
+          height: "82%"
+        },
+        'width': 450,
+        'height': 245,
+        'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
         'is3D': true
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart6'));
