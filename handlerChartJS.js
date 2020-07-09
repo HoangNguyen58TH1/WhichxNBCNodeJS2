@@ -1,4 +1,3 @@
-
 var arrayPercentFunction = function (param1) {
 
   let arr_length = param1.length
@@ -16,7 +15,6 @@ var arrayPercentFunction = function (param1) {
   var arrayMerge = Object.values(merge)
   console.log('arrayMerge:', arrayMerge);
   return arrayMerge
-
 }
 
 arrayMergeTotal1 = arrayPercentFunction(arrayNews1)
