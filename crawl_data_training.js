@@ -209,20 +209,20 @@ var removePunctuation = require('remove-punctuation');
 //VnExpress
 // const array_training = [
   // [
-  //   'https://vnexpress.net/phap-luat',
-  //   'https://vnexpress.net/phap-luat-p2',
-  //   'https://vnexpress.net/phap-luat-p3',
-  //   'https://vnexpress.net/phap-luat-p4',
-  //   'https://vnexpress.net/phap-luat-p5',
-  //   'https://vnexpress.net/phap-luat-p6',
+    // 'https://vnexpress.net/phap-luat',
+    // 'https://vnexpress.net/phap-luat-p2',
+    // 'https://vnexpress.net/phap-luat-p3',
+    // 'https://vnexpress.net/phap-luat-p4',
+    // 'https://vnexpress.net/phap-luat-p5',
+    // 'https://vnexpress.net/phap-luat-p6',
   // ],
   // [
-  //   'https://vnexpress.net/kinh-doanh',
-  //   'https://vnexpress.net/kinh-doanh/p2',
-  //   'https://vnexpress.net/kinh-doanh/p3',
-  //   'https://vnexpress.net/kinh-doanh/p4',
-  //   'https://vnexpress.net/kinh-doanh/p5',
-  //   'https://vnexpress.net/kinh-doanh/p6',
+    // 'https://vnexpress.net/kinh-doanh',
+    // 'https://vnexpress.net/kinh-doanh/p2',
+    // 'https://vnexpress.net/kinh-doanh/p3',
+    // 'https://vnexpress.net/kinh-doanh/p4',
+    // 'https://vnexpress.net/kinh-doanh/p5',
+    // 'https://vnexpress.net/kinh-doanh/p6',
   // ],
   // [
     // h2
@@ -234,20 +234,20 @@ var removePunctuation = require('remove-punctuation');
   //   'https://vnexpress.net/so-hoa/cong-nghe-p6',
   // ],
   // [
-  //   'https://vnexpress.net/oto-xe-may',
-  //   'https://vnexpress.net/oto-xe-may-p2',
-  //   'https://vnexpress.net/oto-xe-may-p3',
-  //   'https://vnexpress.net/oto-xe-may-p4',
-  //   'https://vnexpress.net/oto-xe-may-p5',
-  //   'https://vnexpress.net/oto-xe-may-p6',
+    // 'https://vnexpress.net/oto-xe-may',
+    // 'https://vnexpress.net/oto-xe-may-p2',
+    // 'https://vnexpress.net/oto-xe-may-p3',
+    // 'https://vnexpress.net/oto-xe-may-p4',
+    // 'https://vnexpress.net/oto-xe-may-p5',
+    // 'https://vnexpress.net/oto-xe-may-p6',
   // ],
   // [
-  //   'https://vnexpress.net/giao-duc',
-  //   'https://vnexpress.net/giao-duc-p2',
-  //   'https://vnexpress.net/giao-duc-p3',
-  //   'https://vnexpress.net/giao-duc-p4',
-  //   'https://vnexpress.net/giao-duc-p5',
-  //   'https://vnexpress.net/giao-duc-p6',
+    // 'https://vnexpress.net/giao-duc',
+    // 'https://vnexpress.net/giao-duc-p2',
+    // 'https://vnexpress.net/giao-duc-p3',
+    // 'https://vnexpress.net/giao-duc-p4',
+    // 'https://vnexpress.net/giao-duc-p5',
+    // 'https://vnexpress.net/giao-duc-p6',
   // ],
   // [
     // 'https://vnexpress.net/suc-khoe',
@@ -257,7 +257,7 @@ var removePunctuation = require('remove-punctuation');
 //     'https://vnexpress.net/suc-khoe/p4',
 //     'https://vnexpress.net/suc-khoe/p5',
 //     'https://vnexpress.net/suc-khoe/p6',
-//   ]
+  // ]
 // ]
 
 //VOV-DaiTiengNoi
@@ -271,10 +271,10 @@ var removePunctuation = require('remove-punctuation');
 //     'https://vov.vn/phap-luat/trang6',
 //   ],
 //   [
-
+//     //2
 //   ],
 //   [
-
+//     //3
 //   ],
 //   [
 //     'https://vov.vn/oto-xe-may/',
@@ -285,7 +285,7 @@ var removePunctuation = require('remove-punctuation');
 //     'https://vov.vn/oto-xe-may/trang6',
 //   ],
 //   [
-
+//     //5
 //   ],
 //   [
 //     'https://vov.vn/suc-khoe/',
@@ -300,7 +300,7 @@ var removePunctuation = require('remove-punctuation');
 //ThanhNien
 const array_training = [
   [
-
+    //1
   ],
   [
     'https://thanhnien.vn/tai-chinh-kinh-doanh/',
@@ -325,7 +325,7 @@ const array_training = [
     'https://thanhnien.vn/cong-nghe/trang-9.html',
   ],
   [
-
+    //4
   ],
   [
     'https://thanhnien.vn/giao-duc/',
@@ -350,6 +350,8 @@ const array_training = [
     'https://thanhnien.vn/suc-khoe/trang-9.html',
   ],
 ]
+fs.appendFile('array_trains.js', "\nvar title_handling_data = [\n", function (err) { if (err) throw err; })
+
 
   for(let i = 0; i < array_training.length; i++){
     let total_string_trains = '';
@@ -358,12 +360,16 @@ const array_training = [
       const result_news_total = await page.evaluate(() => {
 
         //Dantri
-        // let news = document.querySelectorAll('div.clearfix > div.mt3.clearfix.eplcheck > a');
-        // news = [...news].slice(0, 10);
+        // let news = document.querySelectorAll('ul.dt-list.dt-list--lg > li > div.news-item.news-item--stream.news-item--left2right > h3.news-item__title > a');
+        // let news = document.querySelectorAll('ul.dt-list.dt-list--lg > li > div.news-item.news-item--timeline.news-item--left2right > div.news-item__content > h3.news-item__title > a');
+        // let news = document.querySelectorAll(' h3.news-item__title > a'); //star
+        // news = [...news].slice(0, 25);
+
         //Tuoitre
         // let news = document.querySelectorAll('ul.list-news-content > li.news-item > a');
-        // news = [...news].slice(0, 15);
+        // let news = document.querySelectorAll('li.news-item > div.name-news > h3.title-news > a'); //star
         // news = [...news].slice(0, 20);
+
         //Baomoi
         // let news = document.querySelectorAll('div.timeline.loadmore > div.story > h4.story__heading > a');
         // news = [...news].slice(0, 60);
@@ -393,10 +399,16 @@ const array_training = [
       // console.log('url', url);
       console.log('result_news_total: ', result_news_total);
 
-      //  prefix handling data, news_prefix_handling_data is a array contain string.
+      //  PREFIX HANDLING DATA, NEWS_PREFIX_HANDLING_DATA IS A ARRAY CONTAIN STRING.
       let news_prefix_handling_data = result_news_total.map(e => {
         handling_strings = wordTokenizer.tag(removePunctuation(e.title).replace(/-|‘|’|“|”/g,''), 'text').toLowerCase().split(' ').filter(val => !stopwords.includes(val)).join(' ')
-        return handling_strings
+
+        let parse_string = handling_strings.split(' ');
+        let get_number = parse_string.map(e => { if (isNaN(e) === false) { return e } });
+        let filter_NaN = parse_string.filter(val => !get_number.includes(val))
+        let join_element_array = filter_NaN.join(' ')
+
+        return join_element_array
       })
       console.log(news_prefix_handling_data);
 
@@ -405,7 +417,7 @@ const array_training = [
       console.log('[connect_news_into_strings]:', connect_news_into_strings);
 
       //get [all string] of [all Url]
-      total_string_trains = total_string_trains.concat(connect_news_into_strings)
+      total_string_trains = total_string_trains.concat(' ' + connect_news_into_strings)
 
     }
     console.log('TOTAL:', total_string_trains);
@@ -414,6 +426,6 @@ const array_training = [
     fs.appendFile('array_trains.js', "\t'" + total_string_trains + "',\n", function (err) { if (err) throw err; })
 
   }//endfor
-
+  fs.appendFile('array_trains.js', "]\n", function (err) { if (err) throw err; })
   await browser.close();
 })();

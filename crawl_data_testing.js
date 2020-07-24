@@ -19,9 +19,9 @@ var removePunctuation = require('remove-punctuation');
   //Dan tri 10x9=90x6=
   // const array_test = [
     // [
-      // 'https://dantri.com.vn/phap-luat.htm',
-      //     'https://dantri.com.vn/phap-luat/trang-2.htm',
-      //     'https://dantri.com.vn/phap-luat/trang-3.htm',
+    //   'https://dantri.com.vn/phap-luat.htm',
+    //   'https://dantri.com.vn/phap-luat/trang-2.htm',
+    //   'https://dantri.com.vn/phap-luat/trang-3.htm',
       //     'https://dantri.com.vn/phap-luat/trang-4.htm',
       //     'https://dantri.com.vn/phap-luat/trang-5.htm',
       //     'https://dantri.com.vn/phap-luat/trang-6.htm',
@@ -30,9 +30,9 @@ var removePunctuation = require('remove-punctuation');
       //     'https://dantri.com.vn/phap-luat/trang-9.htm',
     // ],
     // [
-      // 'https://dantri.com.vn/kinh-doanh.htm',
-      // 'https://dantri.com.vn/kinh-doanh/trang-2.htm',
-      // 'https://dantri.com.vn/kinh-doanh/trang-3.htm',
+    //   'https://dantri.com.vn/kinh-doanh.htm',
+    //   'https://dantri.com.vn/kinh-doanh/trang-2.htm',
+    //   'https://dantri.com.vn/kinh-doanh/trang-3.htm',
       // 'https://dantri.com.vn/kinh-doanh/trang-4.htm',
       // 'https://dantri.com.vn/kinh-doanh/trang-5.htm',
       // 'https://dantri.com.vn/kinh-doanh/trang-6.htm',
@@ -40,43 +40,43 @@ var removePunctuation = require('remove-punctuation');
       // 'https://dantri.com.vn/kinh-doanh/trang-8.htm',
       // 'https://dantri.com.vn/kinh-doanh/trang-9.htm',
     // ],
-      // [
-        // 'https://dantri.com.vn/suc-manh-so.htm',
-    //     'https://dantri.com.vn/suc-manh-so/trang-2.htm',
-    //     'https://dantri.com.vn/suc-manh-so/trang-3.htm',
+    // [
+    //   'https://dantri.com.vn/suc-manh-so.htm',
+    //   'https://dantri.com.vn/suc-manh-so/trang-2.htm',
+    //   'https://dantri.com.vn/suc-manh-so/trang-3.htm',
     //     'https://dantri.com.vn/suc-manh-so/trang-4.htm',
     //     'https://dantri.com.vn/suc-manh-so/trang-5.htm',
     //     'https://dantri.com.vn/suc-manh-so/trang-6.htm',
     //     'https://dantri.com.vn/suc-manh-so/trang-7.htm',
     //     'https://dantri.com.vn/suc-manh-so/trang-8.htm',
     //     'https://dantri.com.vn/suc-manh-so/trang-9.htm',
-      // ],
-      // [
-        // 'https://dantri.com.vn/o-to-xe-may.htm',
-    //     'https://dantri.com.vn/o-to-xe-may/trang-2.htm',
-    //     'https://dantri.com.vn/o-to-xe-may/trang-3.htm',
+    // ],
+    // [
+    //   'https://dantri.com.vn/o-to-xe-may.htm',
+    //   'https://dantri.com.vn/o-to-xe-may/trang-2.htm',
+    //   'https://dantri.com.vn/o-to-xe-may/trang-3.htm',
     //     'https://dantri.com.vn/o-to-xe-may/trang-4.htm',
     //     'https://dantri.com.vn/o-to-xe-may/trang-5.htm',
     //     'https://dantri.com.vn/o-to-xe-may/trang-6.htm',
     //     'https://dantri.com.vn/o-to-xe-may/trang-7.htm',
     //     'https://dantri.com.vn/o-to-xe-may/trang-8.htm',
     //     'https://dantri.com.vn/o-to-xe-may/trang-9.htm',
-      // ],
-      // [
-        // 'https://dantri.com.vn/giao-duc-khuyen-hoc.htm',
-    //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-2.htm',
-    //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-3.htm',
+    // ],
+    // [
+    // 'https://dantri.com.vn/giao-duc-khuyen-hoc.htm',
+    // 'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-2.htm',
+    // 'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-3.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-4.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-5.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-6.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-7.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-8.htm',
-        // 'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-9.htm',
-      // ],
-      // [
-        // 'https://dantri.com.vn/suc-khoe.htm',
-    //     'https://dantri.com.vn/suc-khoe/trang-2.htm',
-    //     'https://dantri.com.vn/suc-khoe/trang-3.htm',
+    // 'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-9.htm',
+    // ],
+    // [
+    //   'https://dantri.com.vn/suc-khoe.htm',
+    //   'https://dantri.com.vn/suc-khoe/trang-2.htm',
+      // 'https://dantri.com.vn/suc-khoe/trang-3.htm',
     //     'https://dantri.com.vn/suc-khoe/trang-4.htm',
     //     'https://dantri.com.vn/suc-khoe/trang-5.htm',
     //     'https://dantri.com.vn/suc-khoe/trang-6.htm',
@@ -148,59 +148,59 @@ var removePunctuation = require('remove-punctuation');
   //   ]
   // ]
   //Baomoi
-  const array_test = [
-    [
+  // const array_test = [
+  //   [
       // 'https://baomoi.com/phap-luat.epi',
       // 'https://baomoi.com/phap-luat/trang2.epi',
-      'https://baomoi.com/phap-luat/trang3.epi',
-      'https://baomoi.com/phap-luat/trang4.epi',
+      // 'https://baomoi.com/phap-luat/trang3.epi',
+      // 'https://baomoi.com/phap-luat/trang4.epi',
   //     'https://baomoi.com/phap-luat/trang5.epi',
   //     'https://baomoi.com/phap-luat/trang6.epi',
-    ],
-    [
+    // ],
+    // [
       // 'https://baomoi.com/kinh-doanh.epi',
       // 'https://baomoi.com/kinh-doanh/trang2.epi',
-      'https://baomoi.com/kinh-doanh/trang3.epi',
-      'https://baomoi.com/kinh-doanh/trang4.epi',
+      // 'https://baomoi.com/kinh-doanh/trang3.epi',
+      // 'https://baomoi.com/kinh-doanh/trang4.epi',
   //     'https://baomoi.com/kinh-doanh/trang5.epi',
   //     'https://baomoi.com/kinh-doanh/trang6.epi',
-    ],
-    [
+    // ],
+    // [
       // 'https://baomoi.com/khoa-hoc-cong-nghe.epi',
       // 'https://baomoi.com/khoa-hoc-cong-nghe/trang2.epi',
-      'https://baomoi.com/khoa-hoc-cong-nghe/trang3.epi',
-      'https://baomoi.com/khoa-hoc-cong-nghe/trang4.epi',
+      // 'https://baomoi.com/khoa-hoc-cong-nghe/trang3.epi',
+      // 'https://baomoi.com/khoa-hoc-cong-nghe/trang4.epi',
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang5.epi',
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang6.epi',
   //      //thay cho CN o tuoitre
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang7.epi',
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang8.epi',
-    ],
-    [
+    // ],
+    // [
       // 'https://baomoi.com/xe-co.epi',
   //     'https://baomoi.com/xe-co/trang2.epi',
-      'https://baomoi.com/xe-co/trang3.epi',
-      'https://baomoi.com/xe-co/trang4.epi',
+      // 'https://baomoi.com/xe-co/trang3.epi',
+      // 'https://baomoi.com/xe-co/trang4.epi',
   //     'https://baomoi.com/xe-co/trang5.epi',
   //     'https://baomoi.com/xe-co/trang6.epi',
-    ],
-    [
+    // ],
+    // [
       // 'https://baomoi.com/giao-duc.epi',
       // 'https://baomoi.com/giao-duc/trang2.epi',
-      'https://baomoi.com/giao-duc/trang3.epi',
-      'https://baomoi.com/giao-duc/trang4.epi',
+      // 'https://baomoi.com/giao-duc/trang3.epi',
+      // 'https://baomoi.com/giao-duc/trang4.epi',
       // 'https://baomoi.com/giao-duc/trang5.epi',
   //     'https://baomoi.com/giao-duc/trang6.epi',
-    ],
-    [
+    // ],
+    // [
       // 'https://baomoi.com/suc-khoe-y-te.epi',
       // 'https://baomoi.com/suc-khoe-y-te/trang2.epi',
-      'https://baomoi.com/suc-khoe-y-te/trang3.epi',
-      'https://baomoi.com/suc-khoe-y-te/trang4.epi',
+      // 'https://baomoi.com/suc-khoe-y-te/trang3.epi',
+      // 'https://baomoi.com/suc-khoe-y-te/trang4.epi',
   //     'https://baomoi.com/suc-khoe-y-te/trang5.epi',
   //     'https://baomoi.com/suc-khoe-y-te/trang6.epi',
-    ]
-  ]
+  //   ]
+  // ]
 
   //VnExpress
   // const array_test = [
@@ -294,58 +294,58 @@ var removePunctuation = require('remove-punctuation');
   // ]
 
   //ThanhNien
-  // const array_test = [
-  //   [
+  const array_test = [
+    [
 
-  //   ],
-  //   [
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-2.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-3.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-4.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-5.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-6.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-7.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-8.html',
-  //     'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-9.html',
-  //   ],
-  //   [
-  //     'https://thanhnien.vn/cong-nghe/',
-  //     'https://thanhnien.vn/cong-nghe/trang-2.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-3.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-4.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-5.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-6.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-7.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-8.html',
-  //     'https://thanhnien.vn/cong-nghe/trang-9.html',
-  //   ],
-  //   [
+    ],
+    [
+      'https://thanhnien.vn/tai-chinh-kinh-doanh/',
+      'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-2.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-3.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-4.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-5.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-6.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-7.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-8.html',
+      // 'https://thanhnien.vn/tai-chinh-kinh-doanh/trang-9.html',
+    ],
+    [
+      'https://thanhnien.vn/cong-nghe/',
+      'https://thanhnien.vn/cong-nghe/trang-2.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-3.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-4.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-5.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-6.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-7.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-8.html',
+      // 'https://thanhnien.vn/cong-nghe/trang-9.html',
+    ],
+    [
 
-  //   ],
-  //   [
-  //     'https://thanhnien.vn/giao-duc/',
-  //     'https://thanhnien.vn/giao-duc/trang-2.html',
-  //     'https://thanhnien.vn/giao-duc/trang-3.html',
-  //     'https://thanhnien.vn/giao-duc/trang-4.html',
-  //     'https://thanhnien.vn/giao-duc/trang-5.html',
-  //     'https://thanhnien.vn/giao-duc/trang-6.html',
-  //     'https://thanhnien.vn/giao-duc/trang-7.html',
-  //     'https://thanhnien.vn/giao-duc/trang-8.html',
-  //     'https://thanhnien.vn/giao-duc/trang-9.html',
-  //   ],
-  //   [
-  //     'https://thanhnien.vn/suc-khoe/',
-  //     'https://thanhnien.vn/suc-khoe/trang-2.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-3.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-4.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-5.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-6.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-7.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-8.html',
-  //     'https://thanhnien.vn/suc-khoe/trang-9.html',
-  //   ],
-  // ]
+    ],
+    [
+      'https://thanhnien.vn/giao-duc/',
+      'https://thanhnien.vn/giao-duc/trang-2.html',
+      // 'https://thanhnien.vn/giao-duc/trang-3.html',
+      // 'https://thanhnien.vn/giao-duc/trang-4.html',
+      // 'https://thanhnien.vn/giao-duc/trang-5.html',
+      // 'https://thanhnien.vn/giao-duc/trang-6.html',
+      // 'https://thanhnien.vn/giao-duc/trang-7.html',
+      // 'https://thanhnien.vn/giao-duc/trang-8.html',
+      // 'https://thanhnien.vn/giao-duc/trang-9.html',
+    ],
+    [
+      'https://thanhnien.vn/suc-khoe/',
+      'https://thanhnien.vn/suc-khoe/trang-2.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-3.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-4.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-5.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-6.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-7.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-8.html',
+      // 'https://thanhnien.vn/suc-khoe/trang-9.html',
+    ],
+  ]
   fs.appendFile('array_test.js', "\nvar title_handling_data = [\n", function (err) { if (err) throw err; })
   fs.appendFile('array_test_number.js', "\nvar array_number_itinial = [", function (err) { if (err) throw err; })
 
@@ -358,7 +358,8 @@ var removePunctuation = require('remove-punctuation');
         //Dantri
         // let news = document.querySelectorAll('div.clearfix > div.mt3.clearfix.eplcheck > a');
         // let news = document.querySelectorAll('ul.dt-list.dt-list--lg > li > div.news-item.news-item--stream.news-item--left2right > h3.news-item__title > a');
-        // news = [...news].slice(0, 5);
+        // let news = document.querySelectorAll(' h3.news-item__title > a'); //star
+        // news = [...news].slice(0, 25);
 
         //Tuoitre
         // let news = document.querySelectorAll('ul.list-news-content > li.news-item > a');
@@ -366,8 +367,8 @@ var removePunctuation = require('remove-punctuation');
         // news = [...news].slice(0, 20);
 
         //Baomoi
-        let news = document.querySelectorAll('div.timeline.loadmore > div.story > h4.story__heading > a');
-        news = [...news].slice(0, 60);
+        // let news = document.querySelectorAll('div.timeline.loadmore > div.story > h4.story__heading > a');
+        // news = [...news].slice(0, 60);
 
         //VnExpress
         // let news = document.querySelectorAll('div.width_common.list-news-subfolder > article.item-news.item-news-common > h3.title-news > a');
@@ -379,8 +380,8 @@ var removePunctuation = require('remove-punctuation');
         // news = [...news].slice(0, 30);
 
         //ThanhNien
-        // let news = document.querySelectorAll('div.relative > article.story > a');
-        // news = [...news].slice(0, 20);
+        let news = document.querySelectorAll('div.relative > article.story > a');
+        news = [...news].slice(0, 20);
 
         //---//
         let result_news = news.map(link => ({
@@ -395,7 +396,6 @@ var removePunctuation = require('remove-punctuation');
       console.log('result_news_total: ', result_news_total);
 
       // PREFIX HANDLING DATA, NEWS_PREFIX_HANDLING_DATA IS A ARRAY CONTAIN STRING.
-      // fs.appendFile('array_test.js', "let title_handling_data" + (i+1) + " = [\n", function (err) { if (err) throw err; })
       let news_prefix_handling_data = result_news_total.map(e => {
         let handling_strings = wordTokenizer.tag(removePunctuation(e.title).replace(/-|‘|’|“|”/g, ''), 'text').toLowerCase().split(' ').filter(val => !stopwords.includes(val)).join(' ')
         // console.log('[handling_strings]', handling_strings);
@@ -409,7 +409,6 @@ var removePunctuation = require('remove-punctuation');
         fs.appendFile('array_test_number.js', (i+1) + ",", function (err) { if (err) throw err; })
         return join_element_array
       })
-      // fs.appendFile('array_test.js', "]\n", function (err) { if (err) throw err; })
       console.log(news_prefix_handling_data);
 
 

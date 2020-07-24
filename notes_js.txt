@@ -17,6 +17,7 @@ nên làm sao đó cho nó ra 6 mảng luôn
 
 -- - kk - ck - cc (test-trains)
 
+0. bỏ số vô nghĩa.
 1. crawl lại data training mới
 2. save DB
 3. viết slide PP
