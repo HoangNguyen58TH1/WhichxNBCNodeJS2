@@ -71,7 +71,7 @@ var removePunctuation = require('remove-punctuation');
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-6.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-7.htm',
     //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-8.htm',
-    //     'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-9.htm',
+        // 'https://dantri.com.vn/giao-duc-khuyen-hoc/trang-9.htm',
       // ],
       // [
         // 'https://dantri.com.vn/suc-khoe.htm',
@@ -83,7 +83,7 @@ var removePunctuation = require('remove-punctuation');
     //     'https://dantri.com.vn/suc-khoe/trang-7.htm',
     //     'https://dantri.com.vn/suc-khoe/trang-8.htm',
     //     'https://dantri.com.vn/suc-khoe/trang-9.htm',
-      // ]
+  //     ]
   // ]
 
   //TuoiTre 15x3=45
@@ -150,26 +150,26 @@ var removePunctuation = require('remove-punctuation');
   //Baomoi
   const array_test = [
     [
-      'https://baomoi.com/phap-luat.epi',
-  //     'https://baomoi.com/phap-luat/trang2.epi',
-  //     'https://baomoi.com/phap-luat/trang3.epi',
-  //     'https://baomoi.com/phap-luat/trang4.epi',
+      // 'https://baomoi.com/phap-luat.epi',
+      // 'https://baomoi.com/phap-luat/trang2.epi',
+      'https://baomoi.com/phap-luat/trang3.epi',
+      'https://baomoi.com/phap-luat/trang4.epi',
   //     'https://baomoi.com/phap-luat/trang5.epi',
   //     'https://baomoi.com/phap-luat/trang6.epi',
     ],
     [
-      'https://baomoi.com/kinh-doanh.epi',
-  //     'https://baomoi.com/kinh-doanh/trang2.epi',
-  //     'https://baomoi.com/kinh-doanh/trang3.epi',
-  //     'https://baomoi.com/kinh-doanh/trang4.epi',
+      // 'https://baomoi.com/kinh-doanh.epi',
+      // 'https://baomoi.com/kinh-doanh/trang2.epi',
+      'https://baomoi.com/kinh-doanh/trang3.epi',
+      'https://baomoi.com/kinh-doanh/trang4.epi',
   //     'https://baomoi.com/kinh-doanh/trang5.epi',
   //     'https://baomoi.com/kinh-doanh/trang6.epi',
     ],
     [
-      'https://baomoi.com/khoa-hoc-cong-nghe.epi',
-  //     'https://baomoi.com/khoa-hoc-cong-nghe/trang2.epi',
-  //     'https://baomoi.com/khoa-hoc-cong-nghe/trang3.epi',
-  //     'https://baomoi.com/khoa-hoc-cong-nghe/trang4.epi',
+      // 'https://baomoi.com/khoa-hoc-cong-nghe.epi',
+      // 'https://baomoi.com/khoa-hoc-cong-nghe/trang2.epi',
+      'https://baomoi.com/khoa-hoc-cong-nghe/trang3.epi',
+      'https://baomoi.com/khoa-hoc-cong-nghe/trang4.epi',
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang5.epi',
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang6.epi',
   //      //thay cho CN o tuoitre
@@ -177,26 +177,26 @@ var removePunctuation = require('remove-punctuation');
   //     'https://baomoi.com/khoa-hoc-cong-nghe/trang8.epi',
     ],
     [
-      'https://baomoi.com/xe-co.epi',
+      // 'https://baomoi.com/xe-co.epi',
   //     'https://baomoi.com/xe-co/trang2.epi',
-  //     'https://baomoi.com/xe-co/trang3.epi',
-  //     'https://baomoi.com/xe-co/trang4.epi',
+      'https://baomoi.com/xe-co/trang3.epi',
+      'https://baomoi.com/xe-co/trang4.epi',
   //     'https://baomoi.com/xe-co/trang5.epi',
   //     'https://baomoi.com/xe-co/trang6.epi',
     ],
     [
-      'https://baomoi.com/giao-duc.epi',
-  //     'https://baomoi.com/giao-duc/trang2.epi',
-  //     'https://baomoi.com/giao-duc/trang3.epi',
-  //     'https://baomoi.com/giao-duc/trang4.epi',
-  //     'https://baomoi.com/giao-duc/trang5.epi',
+      // 'https://baomoi.com/giao-duc.epi',
+      // 'https://baomoi.com/giao-duc/trang2.epi',
+      'https://baomoi.com/giao-duc/trang3.epi',
+      'https://baomoi.com/giao-duc/trang4.epi',
+      // 'https://baomoi.com/giao-duc/trang5.epi',
   //     'https://baomoi.com/giao-duc/trang6.epi',
     ],
     [
-      'https://baomoi.com/suc-khoe-y-te.epi',
-  //     'https://baomoi.com/suc-khoe-y-te/trang2.epi',
-  //     'https://baomoi.com/suc-khoe-y-te/trang3.epi',
-  //     'https://baomoi.com/suc-khoe-y-te/trang4.epi',
+      // 'https://baomoi.com/suc-khoe-y-te.epi',
+      // 'https://baomoi.com/suc-khoe-y-te/trang2.epi',
+      'https://baomoi.com/suc-khoe-y-te/trang3.epi',
+      'https://baomoi.com/suc-khoe-y-te/trang4.epi',
   //     'https://baomoi.com/suc-khoe-y-te/trang5.epi',
   //     'https://baomoi.com/suc-khoe-y-te/trang6.epi',
     ]
@@ -346,16 +346,19 @@ var removePunctuation = require('remove-punctuation');
   //     'https://thanhnien.vn/suc-khoe/trang-9.html',
   //   ],
   // ]
+  fs.appendFile('array_test.js', "\nvar title_handling_data = [\n", function (err) { if (err) throw err; })
+  fs.appendFile('array_test_number.js', "\nvar array_number_itinial = [", function (err) { if (err) throw err; })
 
   for (let i = 0; i < array_test.length; i++) {
-    let total_string_test = '';
+    // let total_string_test = '';
     for (let url of array_test[i]) {
       await page.goto(url, { waitUntil: 'load', timeout: 0 });
       const result_news_total = await page.evaluate(() => {
 
         //Dantri
         // let news = document.querySelectorAll('div.clearfix > div.mt3.clearfix.eplcheck > a');
-        // news = [...news].slice(0, 10);
+        // let news = document.querySelectorAll('ul.dt-list.dt-list--lg > li > div.news-item.news-item--stream.news-item--left2right > h3.news-item__title > a');
+        // news = [...news].slice(0, 5);
 
         //Tuoitre
         // let news = document.querySelectorAll('ul.list-news-content > li.news-item > a');
@@ -391,43 +394,31 @@ var removePunctuation = require('remove-punctuation');
       // console.log('url', url);
       console.log('result_news_total: ', result_news_total);
 
-      //SAVE NEWS INITIAL
-      // fs.appendFile('array_test.js', "let title_initial" + (i+1) + " = [\n", function (err) { if (err) throw err; })
-      // let save_news_initial = result_news_total.map(e => {
-      //   var save_strings = e.title
-      //   // console.log('[save_strings]', save_strings);
-      //   fs.appendFile('array_test.js', "\t'" + save_strings + "',\n", function (err) { if (err) throw err; })
-      //   return save_strings
-      // })
-      // fs.appendFile('array_test.js', "]\n", function (err) { if (err) throw err; })
-      // console.log(save_news_initial);
-
-
       // PREFIX HANDLING DATA, NEWS_PREFIX_HANDLING_DATA IS A ARRAY CONTAIN STRING.
-      fs.appendFile('array_test.js', "let title_handling_data" + (i+1) + " = [\n", function (err) { if (err) throw err; })
+      // fs.appendFile('array_test.js', "let title_handling_data" + (i+1) + " = [\n", function (err) { if (err) throw err; })
       let news_prefix_handling_data = result_news_total.map(e => {
         let handling_strings = wordTokenizer.tag(removePunctuation(e.title).replace(/-|‘|’|“|”/g, ''), 'text').toLowerCase().split(' ').filter(val => !stopwords.includes(val)).join(' ')
         // console.log('[handling_strings]', handling_strings);
-        fs.appendFile('array_test.js', "\t'" + handling_strings + "',\n", function (err) { if (err) throw err; })
-        return handling_strings
+
+        let parse_string = handling_strings.split(' ');
+        let get_number = parse_string.map(e => { if (isNaN(e) === false) { return e } });
+        let filter_NaN = parse_string.filter(val => !get_number.includes(val))
+        let join_element_array = filter_NaN.join(' ')
+
+        fs.appendFile('array_test.js', "\t'" + join_element_array + "',\n", function (err) { if (err) throw err; })
+        fs.appendFile('array_test_number.js', (i+1) + ",", function (err) { if (err) throw err; })
+        return join_element_array
       })
-      fs.appendFile('array_test.js', "]\n", function (err) { if (err) throw err; })
+      // fs.appendFile('array_test.js', "]\n", function (err) { if (err) throw err; })
       console.log(news_prefix_handling_data);
 
-      //get string of array news_prefix_handling_data
-      // let connect_news_into_strings = news_prefix_handling_data.join(' ')
-      // console.log('[connect_news_into_strings]:', connect_news_into_strings);
-      //get [all string] of [all Url]
-      // total_string_test = total_string_test.concat(connect_news_into_strings)
+
     }
-    // console.log('TOTAL:', total_string_test);
-
-
-    //handling files
-    // fs.appendFile('array_test.js', save_news_initial + '\n', function (err) { if (err) throw err; })
-    // fs.appendFile('array_test.js', "\t'" + total_string_test + "',\n", function (err) { if (err) throw err; })
 
   }//endfor
+  fs.appendFile('array_test.js', "]\n", function (err) { if (err) throw err; })
+  fs.appendFile('array_test.js', "\nmodule.exports = title_handling_data;\n", function (err) { if (err) throw err; })
+  fs.appendFile('array_test_number.js', "]\n", function (err) { if (err) throw err; })
 
   await browser.close();
 })();

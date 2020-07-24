@@ -1,0 +1,23 @@
+1. 
+tại gì chart JS chỉ nhận dữ liệu cho từng mảng thôi
+nên làm sao đó cho nó ra 6 mảng luôn
+1. 71,7 
+2. 64 
+3. 57.1
+4. 87.3
+5. 
+6. 85.7 84.2
+
+71.7 - 70 - 61.7 - 61.7
+62.7 - 60.8 - 60.8 - 60.8
+52.5 - 64.4 - 63.3 - 63.3 
+73.3 - 90 - 91.7 - 91.7
+
+89.6 - 85 - 86.4 - 84.7
+
+-- - kk - ck - cc (test-trains)
+
+1. crawl lại data training mới
+2. save DB
+3. viết slide PP
+4. đọc lại báo cáo + slide PP --> để thuyết trình.
