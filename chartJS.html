@@ -49,6 +49,7 @@
 
   <!-- <h1 style="text-align: center;">Algorithm Page</h1> -->
   <h1 style="text-align: center;">Naive Bayes Classifier</h1>
+  <h2 style="text-align: center;" id="total_percent"></h2>
   <div class="table_chart" id="piechart1" style="text-align: center; width: 33%;  float: left;">error1</div>
   <div class="table_chart" id="piechart2" style="text-align: center; width: 33%;  float: left;">error2</div>
   <div class="table_chart" id="piechart3" style="text-align: center; width: 33%;  float: left;">error3</div>
@@ -74,7 +75,10 @@
     });
     google.charts.setOnLoadCallback(drawChart);
 
-    // console.log('abc', arrayMergeTotal);
+    var total_amount = arrayMergeTotal1[0] + arrayMergeTotal2[1] + arrayMergeTotal3[2] + arrayMergeTotal4[3] + arrayMergeTotal5[4] + arrayMergeTotal6[5];
+    var total_percent = (total_amount/array_number_itinial.length)*100
+    console.log('total_percent: ', total_percent);
+    document.getElementById('total_percent').innerHTML = "Độ chính xác trung bình của 6 thể loại: " + total_percent.toFixed(2) + "%";
     // console.log('abc2', arrayMergeTotal2);
 
     // var arrayMergeTotal = [8, 0, 2, 0, 3, 1, 1]
@@ -84,6 +88,7 @@
       var data = google.visualization.arrayToDataTable([
         ['Thể loại', 'Số lượng mỗi loại tin'],
         ['Pháp Luật', arrayMergeTotal1[0]],
+        // ['Pháp Luật', 200],
         ['Kinh Doanh', arrayMergeTotal1[1]],
         ['Công nghệ', arrayMergeTotal1[2]],
         ['Xe', arrayMergeTotal1[3]],

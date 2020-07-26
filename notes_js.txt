@@ -22,3 +22,13 @@ nên làm sao đó cho nó ra 6 mảng luôn
 2. save DB
 3. viết slide PP
 4. đọc lại báo cáo + slide PP --> để thuyết trình.
+
+nội dung gồm: nêu vấn đề (nêu bài toán), hướng giải quyết, đi vào từng bước trong hướng giải quyết, kết quả.
+
+sáng 29/7/2020 em đem chương trình lên VP Khoa CNTT để GV chấm phản biện, 
+em chuẩn bị slide để sáng 30/07/2020 trình bày trước hội đồng nhé.
+
+chấm phản biện tại VP Bộ môn em nhé
+chưa cần, đến 30/7 trình bày trước hội đồng mới dùng pp nhe
+
+//26/07/2020
