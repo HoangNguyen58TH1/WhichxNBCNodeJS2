@@ -72,12 +72,10 @@ module.exports = (async () => {
       }));
       return content;
     });
-
     //arrayContent di tung object cua contentTintuc de tao thanh 1 Array chua nhung ptu la chuoi
     var arrayContent = contentTintuc.map((e) => {
       return e.content
     })
-
     //noi cac ptu la chuoi trong arrayContent lai
     var stringsContentTinTuc = arrayContent.join('<br/><br/> ');
 

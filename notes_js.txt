@@ -32,3 +32,28 @@ chấm phản biện tại VP Bộ môn em nhé
 chưa cần, đến 30/7 trình bày trước hội đồng mới dùng pp nhe
 
 //26/07/2020
+1. file crawl_data_testing crawl thêm des, img, content. (đang có title)
+Rồi sau đó tự động phân loại và save vào DB.
+_ Auto crawl + auto classifier OK
+_ Add crawl des, img, content OK
+_ Crawl all dât + classifier OK
+_ Save data in DB OK
+
+
+thêm phần tử vào array --> push
+merge array into array --> concat (nối 2 array lại vs nhau)
+
+//27/07/2020
+Hỏi anh Thắng or tự tìm hiểu khi thêm tin tức trong Admin
+Crawl lại img of tin tức
+Trong admin khi thêm tin tức thì auto classifier
+Làm slide báo cáo
+Custom lại 1 số chổ trong page Admin (tgian, ...)
+
+Chỉnh lại img trong admin
+_ Nếu là link url thì k có path
+_ Nếu là img nhập vào thì phải thêm path: "upload/tintuc/{{...}}"
+
+
+*** THì ra thằng baomoi.com nó cũng crawl tin tức nhiều nguồn khác nhau (vov.vn, congan.com, kienthuc.net, vietnamnet.vn )
+

@@ -1,11 +1,11 @@
 var mysql = require("mysql");
 var config = require("./config.js");
-var tintuc = require("./tintuc.js");
+var crawl_data_testing = require("./crawl_data_testing.js");
 var connection = mysql.createConnection(config);
 
 connection.connect();
 async function saveDB() {
-  let articlesArray = await tintuc();
+  let articlesArray = await crawl_data_testing();
   let articlesPromise = articlesArray.map(article => create(article));
   let results = await Promise.all(articlesPromise);
   // let articlesTitle = articles.map(article => article.title);

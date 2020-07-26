@@ -41,7 +41,7 @@ var WhichX = require("whichx");
       let urlTintuc = document.querySelectorAll('ul.list-news-content > li.news-item > div.name-news > h3.title-news > a');
       //thethao
       // let urlTintuc = document.querySelectorAll('ul.list-news-content > li.news-item > div.txt > h3 > a');
-      urlTintuc = [...urlTintuc];
+      urlTintuc = [...urlTintuc].slice(0,2);
       let articles3 = urlTintuc.map(link => ({
         url: link.getAttribute('href')
       }))
@@ -60,7 +60,7 @@ var WhichX = require("whichx");
     })
     console.log(arrayUrl);
 
-    //
+    //start crawl data from url
     var arrayTitle = []
     var arrayImageUrl = []
     var arrayDescription = []
@@ -129,7 +129,7 @@ var WhichX = require("whichx");
     console.log(typeof arrayTitle);
     console.log('IMAGE URL TOTAL: ', arrayImageUrl);
     console.log(typeof arrayImageUrl);
-    console.log('IMAGE URL TOTAL: ', arrayUrl);
+    console.log('URL TOTAL: ', arrayUrl);
     console.log(typeof arrayUrl);
     console.log('DESCRIPTION TOTAL:', arrayDescription);
     console.log(typeof arrayDescription);
