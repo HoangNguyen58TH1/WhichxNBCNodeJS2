@@ -92,7 +92,7 @@ module.exports = (async () => {
   const array_test = [
     [
       // 'https://tuoitre.vn/phap-luat.htm',
-      'https://tuoitre.vn/phap-luat/trang-2.htm',
+      // 'https://tuoitre.vn/phap-luat/trang-2.htm',
       //     'https://tuoitre.vn/phap-luat/trang-3.htm',
       // 'https://tuoitre.vn/phap-luat/trang-4.htm',
       // 'https://tuoitre.vn/phap-luat/trang-5.htm',
@@ -103,7 +103,7 @@ module.exports = (async () => {
     ],
     [
       // 'https://tuoitre.vn/kinh-doanh.htm',
-      'https://tuoitre.vn/kinh-doanh/trang-2.htm',
+      // 'https://tuoitre.vn/kinh-doanh/trang-2.htm',
       // 'https://tuoitre.vn/kinh-doanh/trang-3.htm',
       // 'https://tuoitre.vn/kinh-doanh/trang-4.htm',
       // 'https://tuoitre.vn/kinh-doanh/trang-5.htm',
@@ -117,7 +117,7 @@ module.exports = (async () => {
     ],
     [
         // 'https://tuoitre.vn/xe.htm',
-        'https://tuoitre.vn/xe/trang-2.htm',
+        // 'https://tuoitre.vn/xe/trang-2.htm',
       //   'https://tuoitre.vn/xe/trang-3.htm',
       // 'https://tuoitre.vn/xe/trang-4.htm',
       // 'https://tuoitre.vn/xe/trang-5.htm',
@@ -127,8 +127,8 @@ module.exports = (async () => {
       // 'https://tuoitre.vn/xe/trang-9.htm',
     ],
     [
-        // 'https://tuoitre.vn/giao-duc.htm',
-        'https://tuoitre.vn/giao-duc/trang-2.htm',
+        'https://tuoitre.vn/giao-duc.htm',
+        // 'https://tuoitre.vn/giao-duc/trang-2.htm',
       //   'https://tuoitre.vn/giao-duc/trang-3.htm',
       // 'https://tuoitre.vn/giao-duc/trang-4.htm',
       // 'https://tuoitre.vn/giao-duc/trang-5.htm',
@@ -138,8 +138,8 @@ module.exports = (async () => {
       // 'https://tuoitre.vn/giao-duc/trang-9.htm',
     ],
     [
-        // 'https://tuoitre.vn/suc-khoe.htm',
-        'https://tuoitre.vn/suc-khoe/trang-2.htm',
+        'https://tuoitre.vn/suc-khoe.htm',
+        // 'https://tuoitre.vn/suc-khoe/trang-2.htm',
       //   'https://tuoitre.vn/suc-khoe/trang-3.htm',
       // 'https://tuoitre.vn/suc-khoe/trang-4.htm',
       // 'https://tuoitre.vn/suc-khoe/trang-5.htm',
@@ -421,7 +421,8 @@ module.exports = (async () => {
   for (let i = 0; i < array_test.length; i++) {
     // let total_string_test = '';
     for (let url of array_test[i]) {
-      await page.goto(url, { waitUntil: 'load', timeout: 0 });
+      await page.goto(url, { timeout: 0 });
+      await page.waitForSelector('li.news-item > div.name-news > h3.title-news > a');
       const result_news_total = await page.evaluate(() => {
         //Dantri
         // let news = document.querySelectorAll('div.clearfix > div.mt3.clearfix.eplcheck > a');
@@ -432,7 +433,7 @@ module.exports = (async () => {
         //Tuoitre
         // let news = document.querySelectorAll('ul.list-news-content > li.news-item > a');
         let news = document.querySelectorAll('li.news-item > div.name-news > h3.title-news > a'); //star
-        news = [...news].slice(0, 10);
+        news = [...news].slice(0, 20);
         // news = [...news].slice(0, 20);
 
         //Baomoi
@@ -486,7 +487,10 @@ module.exports = (async () => {
       //START CRAWL DATA FROM URL
       var arrayTitle = [], arrayImageUrl = [], arrayDescription = [], arrayContentTotal = [];
       for (let articles of result_news_total) {
-        await page.goto('https://tuoitre.vn/' + articles.url, { waitUntil: 'load', timeout: 0 });
+        await page.goto('https://tuoitre.vn/' + articles.url, { timeout: 0 });
+        // await page.waitForSelector('article-title');
+        // await page.waitForSelector('#main-detail-body > p');
+        // await page.waitForSelector('#main-detail-body > p');
 
         //title
         let titleTintuc = await page.evaluate(() => {
@@ -696,6 +700,8 @@ module.exports = (async () => {
       Hinh: arrayImageUrl_total[i],
       NoiBat: 1,
       SoLuotXem: 0,
+      created_at: new Date(),
+      updated_at: new Date()
     }
     articlesArray.push(articlesObject)
   }

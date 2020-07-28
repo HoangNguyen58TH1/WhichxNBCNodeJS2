@@ -31,6 +31,18 @@ em chuẩn bị slide để sáng 30/07/2020 trình bày trước hội đồng 
 chấm phản biện tại VP Bộ môn em nhé
 chưa cần, đến 30/7 trình bày trước hội đồng mới dùng pp nhe
 
+Đầu tiên nên trình bày mục đích
+Đi vào từng cái mình làm
+Nên đầy đủ và chi tiết nhưng đừng quá chi tiết
+Đã làm gì
+Làm ntn
+Ứng dụng cái gì
+Công sức mình bỏ ra ntn
+Rồi mới demo
+Thêm cái nữa là trong ưeb, Admin khi thêm tin tức thì nên có auto phân loại
+
+Thực nghiệm.
+
 //26/07/2020
 1. file crawl_data_testing crawl thêm des, img, content. (đang có title)
 Rồi sau đó tự động phân loại và save vào DB.
@@ -57,3 +69,60 @@ _ Nếu là img nhập vào thì phải thêm path: "upload/tintuc/{{...}}"
 
 *** THì ra thằng baomoi.com nó cũng crawl tin tức nhiều nguồn khác nhau (vov.vn, congan.com, kienthuc.net, vietnamnet.vn )
 
+
+
+28/07/2020
+nội dung gồm: nêu vấn đề (nêu bài toán), hướng giải quyết, đi vào từng bước trong hướng giải quyết, kết quả.
+[
+1. lý do chọn đề tài
+	nếu bài toán: do tin tức ,...
+	xây dựng web tin tức crawl data from web tin tức uy tín khác
+2.
+	xây dựng web tin tức
+	train
+	test
+	thuật toán
+]
+sáng 29/7/2020 em đem chương trình lên VP Khoa CNTT để GV chấm phản biện, 
+em chuẩn bị slide để sáng 30/07/2020 trình bày trước hội đồng nhé.
+
+chấm phản biện tại VP Bộ môn em nhé
+chưa cần, đến 30/7 trình bày trước hội đồng mới dùng pp nhe
+
+Đầu tiên nên trình bày mục đích
+Đi vào từng cái mình làm
+Nên đầy đủ và chi tiết nhưng đừng quá chi tiết
+Đã làm gì
+Làm ntn
+Ứng dụng cái gì
+Công sức mình bỏ ra ntn
+Rồi mới demo
+Thêm cái nữa là trong ưeb, Admin khi thêm tin tức thì nên có auto phân loại
+
+Thực nghiệm.
+
+1. lý do chọn đề tài, mục đích và yêu cầu
+2. phân tích và thiết kế hệ thống
+3. công cụ thực hiện
+4. kết quả chương trình
+5. tổng kết
+
+// Tối 28/07/2020
+1. Có cách nào để rút ngắn thời gian chạy chương trình khi crawl all data không ?
+2. Coi sơ code có chổ nào cần optimize không ?
+
+//Next
+1. Crawl lượng data vào db. Coi timestamp như nào ??? work chưa 11h40
+	Export ra sql
+2. Crawl data của trang khác. 12h
+3. Custom code chổ thêm tin tức 12h30
++ sửa lại html
++ sửa thể loại
++ 
+4. Hoàn chỉnh slide 1h30
+
+1. đợi crawl 2 url nữa thì export sql OK
+2. crawl thử thằng web khác
+3. xử lý chổ img. OK
+4. làm thêm slide.
+1h ngủ.

@@ -88,7 +88,6 @@
       var data = google.visualization.arrayToDataTable([
         ['Thể loại', 'Số lượng mỗi loại tin'],
         ['Pháp Luật', arrayMergeTotal1[0]],
-        // ['Pháp Luật', 200],
         ['Kinh Doanh', arrayMergeTotal1[1]],
         ['Công nghệ', arrayMergeTotal1[2]],
         ['Xe', arrayMergeTotal1[3]],
@@ -104,13 +103,14 @@
         chartArea: {
           left: 100,
           width: "82%",
-          height: "82%"
+          height: "82%",
         },
         // chartArea:{width: "95%"},
         'width': 450,
         'height': 245,
         'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
         'is3D': true,
+        fontSize: 14,
       };
       //https://developers.google.com/chart/interactive/docs/gallery/piechart
       // bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -145,7 +145,8 @@
         'width': 450,
         'height': 245,
         'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
-        'is3D': true
+        'is3D': true,
+        fontSize: 14,
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
       chart2.draw(data2, options2);
@@ -175,7 +176,8 @@
         'width': 450,
         'height': 245,
         'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
-        'is3D': true
+        'is3D': true,
+        fontSize: 14,
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart3'));
       chart2.draw(data3, options3);
@@ -205,7 +207,8 @@
         'width': 450,
         'height': 245,
         'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
-        'is3D': true
+        'is3D': true,
+        fontSize: 14,
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart4'));
       chart2.draw(data4, options4);
@@ -235,7 +238,8 @@
         'width': 450,
         'height': 245,
         'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
-        'is3D': true
+        'is3D': true,
+        fontSize: 14,
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart5'));
       chart2.draw(data5, options5);
@@ -265,7 +269,8 @@
         'width': 450,
         'height': 245,
         'colors': ['#DF0101', '#FF8000', '#00CCCC', '#31B404', '#29088A', '#585858'],
-        'is3D': true
+        'is3D': true,
+        fontSize: 14,
       };
       var chart2 = new google.visualization.PieChart(document.getElementById('piechart6'));
       chart2.draw(data6, options6);
