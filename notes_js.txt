@@ -126,3 +126,15 @@ Thực nghiệm.
 3. xử lý chổ img. OK
 4. làm thêm slide.
 1h ngủ.
+
+laravel
+fix img not show
+fix show <p> when add news
+create server.js, train.js
+classifier when add news
+
+nodejs
+custom Google Chart
+crawl data for db
+remove waitUntil-load
+add time for news
